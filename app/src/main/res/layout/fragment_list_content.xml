@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="@dimen/md_keylines">
+
+    <ImageView
+        android:id="@+id/list_avatar"
+        android:layout_width="@dimen/teacher_size"
+        android:layout_height="@dimen/teacher_size"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/teacher1" />
+
+    <TextView
+        android:id="@+id/list_title"
+        android:layout_width="329dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="@dimen/article_subheading"
+        app:layout_constraintLeft_toRightOf="@+id/list_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/item_title" />
+
+    <TextView
+        android:id="@+id/list_desc"
+        android:layout_width="330dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/medium_grey"
+        android:textSize="@dimen/list_body"
+        app:layout_constraintLeft_toRightOf="@+id/list_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/list_title"
+        tools:text="@string/item_desc" />
+</androidx.constraintlayout.widget.ConstraintLayout>
